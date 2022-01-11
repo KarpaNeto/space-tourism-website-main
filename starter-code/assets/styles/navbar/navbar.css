@@ -19,13 +19,26 @@
     margin-left: 55px;
 }
 
+.float-bar {
+    content: "";
+    height: 1px;
+    width: 33%;
+    margin-left: 190px;
+    position: fixed;
+    z-index: 2;
+    background-color: var(--color-white);
+    opacity: .25;
+
+}
+
 .nav-list {
     height: 96px;
     background: rgba(255, 255, 255, 0.04);
     backdrop-filter: blur(81.5485px);
-    padding: 0 165px;
+    padding-left: 123px;
+    padding-right: 165px;
     list-style: none;
-    width: 56%;
+    min-width: 56%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -37,7 +50,7 @@
     color: var(--color-white);
     text-transform: uppercase;
     display: inline-block;
-    padding: 37px 0;
+    padding: 37px 10px;
 
 }
 
