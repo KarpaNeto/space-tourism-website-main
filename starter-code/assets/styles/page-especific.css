@@ -1,0 +1,31 @@
+@import url('./custom-properties.css');
+
+/* ------------------- */
+/* Page specific       */
+/* ------------------- */
+
+/* background */
+body {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+}
+
+/* home */
+
+.home {
+    background-image: url('../home/background-home-mobile.jpg');
+}
+
+@media (min-width: 35rem) {
+    .home {
+        background-position: center center;
+        background-image: url('../home/background-home-tablet.jpg');
+    }
+}
+
+@media (min-width: 48rem) {
+    .home {
+        background-image: url('../home/background-home-desktop.jpg');
+    }
+}
