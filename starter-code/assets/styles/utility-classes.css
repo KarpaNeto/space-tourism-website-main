@@ -35,7 +35,7 @@
 }
 
 .grid-container * {
-    max-width: 50ch;
+    max-width: 45ch;
 }
 
 @media (min-width: 48em) {
