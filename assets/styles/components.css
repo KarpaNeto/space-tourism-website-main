@@ -141,32 +141,21 @@
     }
 }
 
-.underline-indicators>li,
-.underline-indicators>li,
-.underline-indicators>a,
-.underline-indicators>a,
-.underline-indicators>button,
-.underline-indicators>button {
+
+.underline-indicators>* {
     cursor: pointer;
-    padding: var(--underline-gap, 1rem) 0;
+    padding: var(--underline-gap, .5rem) 0;
     border: 0;
     border-bottom: .2rem solid hsl(var(--clr-white) / 0);
 }
 
-.underline-indicators>li:hover,
-.underline-indicators>li:focus,
-.underline-indicators>a:hover,
-.underline-indicators>a:focus,
-.underline-indicators>button:hover,
-.underline-indicators>button:focus {
+.underline-indicators>*:hover,
+.underline-indicators>*:focus {
     border-color: hsl(var(--clr-white) / .5);
 }
 
 .underline-indicators>.active,
-.underline-indicators>.active:hover,
-.underline-indicators>.active:focus,
-.underline-indicators>[aria-selected="true"],
-.underline-indicators>[aria-selected="true"]:hover {
+.underline-indicators>[aria-selected="true"] {
     color: hsl(var(--clr-white) / 1);
     border-color: hsl(var(--clr-white) / 1);
 }

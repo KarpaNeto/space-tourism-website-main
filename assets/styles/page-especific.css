@@ -29,3 +29,41 @@ body {
         background-image: url('../home/background-home-desktop.jpg');
     }
 }
+
+/* Destination background */
+
+.destination {
+    background-image: url('../destination/background-destination-mobile.jpg');
+}
+
+@media (min-width: 35rem) {
+    .destination {
+        background-image: url('../destination/background-destination-tablet.jpg');
+    }
+}
+
+@media (min-width: 48rem) {
+    .destination {
+        background-image: url('../destination/background-destination-desktop.jpg');
+    }
+}
+
+
+/* CREW BACKGROUND */
+
+.crew {
+    background-image: url('../crew/background-crew-mobile.jpg');
+}
+
+@media (min-width: 35rem) {
+    .crew {
+        background-image: url('../crew/background-crew-tablet.jpg');
+    }
+}
+
+@media (min-width: 48rem) {
+    .crew {
+        background-image: url('../crew/background-crew-desktop.jpg');
+    }
+}
+
