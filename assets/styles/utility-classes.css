@@ -22,8 +22,9 @@
 }
 
 .flow--space-small {
-    --flow-space: .5rem;
+    --flow-space: 1rem;
 }
+
 .container {
     padding-inline: 2em;
     margin-inline: auto;
