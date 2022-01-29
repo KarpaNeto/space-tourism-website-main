@@ -11,7 +11,7 @@
 }
 
 .grid-container * {
-    max-width: 45ch;
+    max-width: 47ch;
 }
 
 .numbered-title {
@@ -89,6 +89,7 @@
     grid-area: image;
     max-width: 50%;
 }
+
 .grid-container--crew>.picture>img {
     width: 100%;
 }
@@ -114,6 +115,37 @@
 .grid-container--crew>article>header>h2 {
     opacity: .5;
 }
+
+
+/* TECHNOLOGY LAYOUT */
+.grid-container--tech {
+    --flow-space: 2rem;
+    grid-template-areas:
+        'title'
+        'image'
+        'tabs'
+        'content';
+}
+
+.grid-container--tech>.picture {
+    grid-area: image;
+    min-width: 100%;
+
+}
+
+.grid-container--tech>.circleNumber-indicators {
+    grid-area: tabs;
+    display: flex;
+}
+
+.grid-container--tech>.tech-details {
+    grid-area: content;
+}
+
+.grid-container--tech>.picture>img {
+    max-width: 100%;
+}
+
 
 @media (min-width: 35em) {
 
@@ -151,69 +183,92 @@
     }
 }
 
-    @media (min-width: 48em) {
-        .grid-container {
-            text-align: left;
-            column-gap: var(--container-gap, 2rem);
-            grid-template-columns: minmax(1rem, 1fr) repeat(2, minmax(0, 40rem)) minmax(1rem, 1fr);
-        }
-
-        .grid-container--home {
-            padding-bottom: max(6rem, 20vh);
-            align-items: end;
-        }
-
-        .grid-container--home>*:first-child {
-            grid-column: 2;
-        }
-
-        .grid-container--home>*:last-child {
-            grid-column: 3;
-        }
-
-        .grid-container--destination {
-            grid-template-areas:
-                '. title title .'
-                '. image tabs .'
-                '. image content .';
-        }
-
-        .destination-info {
-            margin: 0;
-        }
-
-        .grid-container--destination>.picture,
-        .grid-container--crew>.picture {
-            max-width: 100%;
-        }
-
-        .destination-meta {
-            --gap: min(8vw, 5rem);
-            justify-content: start;
-        }
-
-        .grid-container--destination>.tab-list {
-            width: 100%;
-            align-self: flex-end;
-        }
-
-        .grid-container--crew {
-            grid-template-areas:
-                '. title title .'
-                '. content image .'
-                '. tabs image .';
-        }
-
-        .grid-container--crew>.dot-indicators {
-            width: 100%;
-        }
-
-        .grid-container--crew>.picture {
-            align-self: end;
-        }
-
-        .grid-container--crew>.picture::after {
-            display: none;
-        }
-
+@media (min-width: 48em) {
+    .grid-container {
+        text-align: left;
+        column-gap: var(--container-gap, 2rem);
+        grid-template-columns: minmax(1rem, 1fr) repeat(2, minmax(0, 40rem)) minmax(1rem, 1fr);
     }
+
+    .grid-container--home {
+        padding-bottom: max(6rem, 20vh);
+        align-items: end;
+    }
+
+    .grid-container--home>*:first-child {
+        grid-column: 2;
+    }
+
+    .grid-container--home>*:last-child {
+        grid-column: 3;
+    }
+
+    .grid-container--destination {
+        grid-template-areas:
+            '. title title .'
+            '. image tabs .'
+            '. image content .';
+    }
+
+    .destination-info {
+        margin: 0;
+    }
+
+    .grid-container--destination>.picture,
+    .grid-container--crew>.picture,
+    .grid-container--tech>.picture {
+        max-width: 100%;
+    }
+
+    .destination-meta {
+        --gap: min(8vw, 5rem);
+        justify-content: start;
+    }
+
+    .grid-container--destination>.tab-list {
+        width: 100%;
+        align-self: flex-end;
+    }
+
+    .grid-container--crew {
+        grid-template-areas:
+            '. title title .'
+            '. content image .'
+            '. tabs image .';
+    }
+
+    .grid-container--crew>.dot-indicators {
+        width: 100%;
+    }
+
+    .grid-container--crew>.picture {
+        align-self: end;
+    }
+
+    .grid-container--crew>.picture::after {
+        display: none;
+    }
+
+
+    .grid-container--tech {
+        grid-template-columns: minmax(1rem, 1fr) minmax(0, 57rem) minmax(0, 23rem) minmax(1rem, 1fr);
+        grid-template-areas:
+            '. title title .'
+            '. content image .'
+            '. tabs image .'
+            '. tabs image .';
+    }
+
+
+    .grid-container--tech>.circleNumber-indicators {
+        display: grid;
+        grid-column: 2;
+        grid-row: 2;
+        justify-self: start;
+        gap: 2rem;
+    }
+
+    .grid-container--tech>.picture>img {
+       
+    }
+}
